@@ -1,4 +1,4 @@
-def run_brainfuck(incode, input_data=""):
+def run_braincard(incode, input_data=""):
     memory = [0] * 256
     pointer = 0
     output = ""
@@ -67,7 +67,7 @@ def run_brainfuck(incode, input_data=""):
 
     return output
 if __name__ == "__main__":
-    a = run_brainfuck("""♠ ♦ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ 
+    a = run_braincard("""♠ ♦ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ 
     ♠ ♠ ♠ ♠ ♠ ♠ ♥ ♦ ♦ ♠ ♠ ♠ ♠ ♠ ♠ ♠ 
     ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♦ ♥ ♥ ♦ ♥ 
     ♦ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ ♠ 
