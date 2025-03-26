@@ -1,0 +1,23 @@
+def brainfuck_to_braincard(bf_code):
+    translation = {
+        '>': '♠♦',
+        '<': '♦♠',
+        '+': '♠♠',
+        '-': '♥♥',
+        '.': '♥♠',
+        ',': '♠♥',
+        '[': '♥♦',
+        ']': '♦♥'
+    }
+
+    valid_commands = {'>', '<', '+', '-', '.', ',', '[', ']'}
+    filtered_code = [c for c in bf_code if c in valid_commands]
+
+    braincard_code = []
+    for command in filtered_code:
+        braincard_code.append(translation[command])
+
+    return ''.join(braincard_code)
+
+your_brainfuck_code = input() 
+print(f'your braincard code {brainfuck_to_braincard(your_brainfuck_code)}')
